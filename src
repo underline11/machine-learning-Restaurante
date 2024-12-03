@@ -1,0 +1,24 @@
+create database restaurante;
+USE restaurante;
+create table clientes (
+id_cliente int auto_increment primary key,
+nome int not null,
+telefone int not null
+);
+create table pratos (
+id_prato int auto_increment primary key,
+nome int not null,
+preco int not null
+);
+create table pedidos (
+id_pedido int auto_increment primary key,
+id_cliente int not null,
+data_pedido int not null
+);
+create table itens (
+id_item int auto_increment primary key,
+id_pedido int not null,
+id_prato int not null,
+quantidade int not null
+);
+
